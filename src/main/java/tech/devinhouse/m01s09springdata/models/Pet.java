@@ -1,6 +1,5 @@
 package tech.devinhouse.m01s09springdata.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;

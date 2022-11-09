@@ -3,7 +3,6 @@ package tech.devinhouse.m01s09springdata.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tech.devinhouse.m01s09springdata.models.Pessoa;
-import tech.devinhouse.m01s09springdata.repositories.PessoaRepository;
 import tech.devinhouse.m01s09springdata.services.PessoaService;
 
 import java.util.List;
