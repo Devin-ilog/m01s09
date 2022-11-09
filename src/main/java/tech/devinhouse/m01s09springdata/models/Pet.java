@@ -24,8 +24,4 @@ public class Pet {
     @ManyToOne
     private Tutor tutor;
 
-    @ManyToOne
-    @JoinColumn(name = "tutor_secundario_id")
-    private Tutor tutorSec;
-
 }
