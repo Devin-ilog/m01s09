@@ -16,6 +16,9 @@ public class PetService {
     public List<Pet> get() {
         return petRepository.findAll();
     }
+    public List<Pet> get(String nome) {
+        return petRepository.findByNomeContaining(nome);
+    }
 
     public Pet save(Pet pet) {
         return petRepository.save(pet);

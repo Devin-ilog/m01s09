@@ -14,7 +14,10 @@ public class PetController {
     @Autowired private PetService petService;
 
     @GetMapping
-    public List<Pet> get() {
+    public List<Pet> get(String nome) {
+        if (nome != null && !nome.isEmpty()) {
+            return petService.get(nome);
+        }
         return petService.get();
     }
 
