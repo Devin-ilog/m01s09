@@ -37,4 +37,16 @@ public class PetService {
         }
     }
 
+    public List<Pet> getByTutor(String nome) {
+        return petRepository.findByTutorNome(nome);
+    }
+
+    public Integer countByTutor(String nome) {
+        return petRepository.countByTutorNome(nome);
+    }
+
+    public List<String> findNomeByTutor(String nome) {
+        return petRepository.findNomeByTutor(nome);
+    }
+
 }

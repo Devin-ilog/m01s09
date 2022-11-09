@@ -21,6 +21,21 @@ public class PetController {
         return petService.get();
     }
 
+    @GetMapping(path = "findByTutor")
+    public List<Pet> findByTutor(String nome) {
+        return petService.getByTutor(nome);
+    }
+
+    @GetMapping(path = "countByTutor")
+    public Integer countByTutor(String nome) {
+        return petService.countByTutor(nome);
+    }
+
+    @GetMapping(path = "findNomeByTutor")
+    public List<String> findNomeByTutor(String nome) {
+        return petService.findNomeByTutor(nome);
+    }
+
     @PostMapping
     public Pet post(@RequestBody Pet pet) {
         return petService.save(pet);
