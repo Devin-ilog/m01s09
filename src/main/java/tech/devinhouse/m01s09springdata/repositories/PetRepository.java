@@ -11,7 +11,7 @@ import java.util.List;
 public interface PetRepository extends JpaRepository<Pet, Integer> {
 
     // DerivedQueries
-    List<Pet> findByNomeContaining(String nome);
+    List<Pet> findByNomeContainingOrderById(String nome);
 
 //    // JPQL
 //    @Query("SELECT p FROM Pet p WHERE p.nome LIKE %:nome%")

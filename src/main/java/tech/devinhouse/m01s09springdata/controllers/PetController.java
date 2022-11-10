@@ -14,11 +14,12 @@ public class PetController {
     @Autowired private PetService petService;
 
     @GetMapping
-    public List<Pet> get(String nome) {
+    public List<Pet> get(String nome, Integer pagina, Integer tamanho) {
         if (nome != null && !nome.isEmpty()) {
             return petService.get(nome);
         }
-        return petService.get();
+//        return petService.get();
+        return petService.get(pagina, tamanho);
     }
 
     @GetMapping(path = "findByTutor")

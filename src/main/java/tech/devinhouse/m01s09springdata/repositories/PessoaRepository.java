@@ -7,4 +7,6 @@ import tech.devinhouse.m01s09springdata.models.Pessoa;
 @Repository
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 
+    Pessoa findByIdAndTutorIsNotNull(Integer id);
+
 }

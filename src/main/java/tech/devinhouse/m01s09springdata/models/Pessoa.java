@@ -18,4 +18,7 @@ public class Pessoa {
 
     private String docReceitaFederal;
 
+    @ManyToOne
+    private Tutor tutor;
+
 }
