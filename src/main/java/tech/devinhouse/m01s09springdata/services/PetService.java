@@ -14,7 +14,8 @@ import java.util.Optional;
 @Service
 public class PetService {
 
-    @Autowired private PetRepository petRepository;
+    @Autowired
+    private PetRepository petRepository;
 
     public List<Pet> get() {
 
@@ -28,9 +29,25 @@ public class PetService {
 
         return petRepository.findAll();
     }
+
     public List<Pet> get(String nome) {
+
+//        // Somente com ordenação
+//        Sort sort = Sort.by("id");
+//        return petRepository.findByNomeContaining(nome, sort);
+
+//        // Somente com paginação
+//        Pageable pageable = PageRequest.of(1, 3);
+//        return petRepository.findByNomeContaining(nome, pageable);
+
+//        // Paginação e Ordenação
+//        Sort sort = Sort.by("id").descending();
+//        Pageable pageable = PageRequest.of(1, 3, sort);
+//        return petRepository.findByNomeContaining(nome, pageable);
+
         return petRepository.findByNomeContainingOrderById(nome);
     }
+
     public List<Pet> get(Integer pagina, Integer tamanho) {
 
         Sort sort = Sort.by("nome");
